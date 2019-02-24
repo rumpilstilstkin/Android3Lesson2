@@ -145,6 +145,23 @@ public class ObserverExample {
             }
         }));
 
+        disposables.add(o.subscribeWith(new DisposableObserver<String>(){
+            @Override
+            public void onNext(String s) {
+                Log.d("Dto", "onNext" + s);
+            }
+
+            @Override
+            public void onComplete() {
+                Log.d("Dto", "onComplete");
+            }
+
+            @Override
+            public void onError(Throwable t) {
+                Log.d("Dto", "onError");
+            }
+        }));
+
         disposables.dispose();
 
     }

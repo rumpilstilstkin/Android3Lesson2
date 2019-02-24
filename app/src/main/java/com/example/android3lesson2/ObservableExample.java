@@ -38,7 +38,7 @@ public class ObservableExample {
         Observable.just("Hello");
         Observable.just("Hello", "World");
 
-        Maybe.just("Hello");
+        Maybe.just(324.23423);
         Single.just("Hello");
 
         // array or list
@@ -57,6 +57,7 @@ public class ObservableExample {
         Callable<String> callable = new Callable<String>() {
             @Override
             public String call() {
+                //TODO
                 return "Hello";
             }
         };
